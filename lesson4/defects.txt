@@ -1,0 +1,11 @@
+1. Функция "delete_symbol" не предусматривает вариант удаления симвода отличного от искомого регистра:
+
+Test case:
+def test_delete_symbol(): 
+    string_utils = StringUtils()
+    res = string_utils.delete_symbol("Дуся", "д")
+
+Expected Result:  assert res == "уся"
+Actual Result:  assert res == "Дуся"
+
+Error message: AssertionError: assert 'Дуся' == 'уся'
